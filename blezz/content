@@ -1,0 +1,27 @@
+Main:
+dir(a,Applications)
+dir(d,Display)
+dir(c,Color)
+dir(s,System)
+
+Applications:
+act(f,Firefox,firefox)
+act(b,Blueman,blueman-manager)
+act(v,Vesktop,vesktop)
+
+Display:
+act(p,Polybar,bash /home/met/.config/polybar/launch.sh --forest)
+act(v,Volume Bar,/home/met/Documents/volume-bar.sh)
+
+Color:
+dir(f,Filter)
+act(g,Grayscale,/home/met/Documents/toggle-monitor-grayscale.sh)
+
+Filter:
+act(e,Enable,xsct 3000)
+act(d,Disable,xsct 6500)
+
+System:
+act(x,Sleep,systemctl suspend)
+act(r,Reboot,reboot)
+act(s,Shutdown,shutdown now)
