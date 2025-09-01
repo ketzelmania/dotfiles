@@ -1,1 +1,0 @@
-/home/met/.p10k.zsh

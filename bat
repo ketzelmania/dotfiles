@@ -1,1 +1,0 @@
-/home/met/.config/bat

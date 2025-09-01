@@ -1,0 +1,62 @@
+/* Change font to Fira Sans and enable UCSUR rendering */
+::placeholder,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Fira Sans", "nasin-nanpa";
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke-width: 0.1px;
+}
+
+:root {
+  --font-code: "FiraCode Nerd Font" !important;
+}
+
+/* Disable gift button in chat */
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+/* Hide Channel App Launcher in chat */
+[class^="channelAppLauncher_"] {
+  display: none;
+}
+
+/* Hide things in DMs page */
+li div a[href="/shop"], /* Hide 'Shop' Tab */
+li div a[href="/store"] /* Hide 'Ntiro' Tab */ {
+  display: none;
+}
+
+/* Disable clan tag in messages, members list, and popout profile view */
+span[class*="chipletContainerInner_"] {
+  display: none !important;
+}
+
+/* Disable bot tag */
+span[class*="botTagCompact_"] {
+  display: none;
+}
+
+/* Hide new member badge */
+div[class*="newMemberBadge_"] {
+  display: none;
+}
+
+/* Hide "please ping" role for ma pona */
+img[aria-label="Role icon, please ping"] {
+  display: none;
+}
+
+/* Make Super Reactions less annoying (ty Regalia) */
+div[class^="effectsWrapper"] {
+  display: none;
+}
+img.emoji {
+  opacity: 100;
+}
+div[class*="shakeReaction"] {
+  animation: none !important;
+}
