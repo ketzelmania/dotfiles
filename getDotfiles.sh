@@ -13,10 +13,17 @@ paths=(
 "~/.zshrc" "zsh"
 "~/.p10k.zsh" "p10k"
 "~/.tmux.conf" "tmux"
+"~/Pictures/wp11541583-call-of-cthulhu-wallpapers.jpg" "wallpaper"
 )
 
+mv "$HOME/dotfiles/getDotfiles.sh" "$HOME/dotfiles/.getDotfiles.sh"
+
+rm -rfd dotfiles/*
+
+mv "$HOME/dotfiles/.getDotfiles.sh" "$HOME/dotfiles/getDotfiles.sh"
+
 if [ ! -d "dotfiles" ]; then
-    mkdir "dotfiles"
+    mkdir "$HOME/dotfiles"
 fi
 
 for i in ${!paths[@]}; do
@@ -29,10 +36,10 @@ for i in ${!paths[@]}; do
     destination=${paths[i + 1]}
 
     if [ ! -d $destination ]; then
-        mkdir -p "dotfiles/$destination"
+        mkdir -p "$HOME/dotfiles/$destination"
     fi
 
-    cp -r $path "dotfiles/$destination"
+    cp -r $path "$HOME/dotfiles/$destination"
 done
 
 # cleanup
