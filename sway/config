@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-set $menu wofi --show run
+set $menu wofi --style=/home/met/.config/wofi/everforest.css --show drun
 
 # Custom configs
 gaps inner 20
