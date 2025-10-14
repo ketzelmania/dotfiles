@@ -10,6 +10,7 @@ local servers = {
 	"zls",
 	"clangd",
 	"gopls",
+	"cssls",
 }
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -46,3 +47,4 @@ vim.lsp.config("rust_analyzer", {
 		},
 	},
 })
+vim.lsp.enable("rust_analyzer")
