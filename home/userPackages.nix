@@ -33,6 +33,8 @@
         wl-clipboard
         fastfetch
         gh
+        tree
+
         rustup
 
         grim

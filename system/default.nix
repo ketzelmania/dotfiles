@@ -4,15 +4,19 @@
     imports = [
         ./bootloader.nix
         ./networking.nix
+        ./security.nix
+
+        ./users.nix
+        ./keyboard.nix
+        ./audio.nix
+        ./bluetooth.nix
+        ./xdg.nix
         ./locale.nix
         ./fonts.nix
-        ./keyboard.nix
-        ./users.nix
-        ./security.nix
+
+        ./tailscale.nix
+
         ./systemPackages.nix
-        ./xdg.nix
-        ./bluetooth.nix
-        ./audio.nix
     ];
 
     nixpkgs.config.allowUnfree = true;
