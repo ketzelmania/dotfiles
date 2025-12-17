@@ -9,6 +9,7 @@ in
     };
 
     home.file.".config/sway/wp".source = ../dotfiles/wallpaper/wp11541583-call-of-cthulhu-wallpapers.jpg;
+    home.file.".config/sway/wl-color-picker.sh".source = ../dotfiles/scripts/wl-color-picker.sh;
     xdg.configFile."waybar/config.jsonc".source = ../dotfiles/waybar/config.jsonc;
     xdg.configFile."waybar/style.css".source = ../dotfiles/waybar/style.css;
 
@@ -28,6 +29,7 @@ in
 
         extraConfig = ''
             for_window [title=".*Bitwarden.*"] floating enable
+            for_window [title="imv"] floating enable
 
             gaps inner 20
 
@@ -40,6 +42,8 @@ in
             default_dim_inactive 0.1
 
             seat seat0 xcursor_theme Breeze 20
+
+            exec swaylock -i /home/met/.config/sway/wp --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5 --indicator-thickness 6 --text-color FFFFFF
         '';
 
         config = rec {
@@ -105,6 +109,9 @@ in
                 "${mod}+z" = "exec wofi -modi window -show window";
 
                 "${mod}+Shift+n" = "exec swaync-client -t -sw";
+                "${mod}+period" = "exec grim -g \"$(slurp -b 00000000 -p)\" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy";
+
+                "${mod}+e" = "exec swaylock -i /home/met/.config/sway/wp --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5 --indicator-thickness 6 --text-color FFFFFF";
 
                 "XF86AudioMute" = "exec pactl set-sink-mute \\@DEFAULT_SINK@ toggle";
                 "XF86AudioLowerVolume" = "exec pactl set-sink-volume \\@DEFAULT_SINK@ -5%";

@@ -18,4 +18,6 @@
     ];
 
     home.stateVersion = "25.11";
+
+    home.file.".local/share/checkstyle-grading.xml".source = ../dotfiles/checkstyle/checkstyle-grading.xml;
 }

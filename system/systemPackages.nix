@@ -5,5 +5,6 @@
         vim
         wget
         dbus
+        pulseaudio
     ];
 }

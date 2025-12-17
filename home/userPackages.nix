@@ -3,6 +3,7 @@
 {
     home.packages = with pkgs; [
         swayfx
+        swaylock-effects
         greetd
         wofi
         brightnessctl
@@ -14,6 +15,7 @@
         glib
         dconf
         gsettings-desktop-schemas
+        libnotify
 
         kitty
         librewolf
@@ -25,6 +27,7 @@
         libreoffice
         xfce.thunar
         vlc
+        obsidian
 
         lsd
         bat
@@ -34,11 +37,19 @@
         fastfetch
         gh
         tree
+        wine
+        unzip
 
         rustup
+        python3
+        go
+        gcc
 
         grim
         slurp
+        zenity
+        imagemagick
+        imv
 
         btop
         duf
@@ -48,5 +59,8 @@
         zsh-autosuggestions
         zsh-history-substring-search
         zsh-syntax-highlighting
+
+        flatpak
+        nodejs
     ];
 }

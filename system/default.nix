@@ -23,4 +23,16 @@
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
     system.stateVersion = "25.11";
+
+    services.greetd = {
+        enable = true;
+        settings = rec {
+            initial_session = {
+                command = "${pkgs.swayfx}/bin/sway";
+                user = "met";
+            };
+
+            default_session = initial_session;
+        };
+    };
 }

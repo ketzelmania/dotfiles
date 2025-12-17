@@ -6,7 +6,7 @@
     users.users.met = {
         isNormalUser = true;
         description = "met";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "input" ];
         packages = with pkgs; [];
 
         shell = pkgs.zsh;
