@@ -60,3 +60,7 @@ img.emoji {
 div[class*="shakeReaction"] {
   animation: none !important;
 }
+
+.c19a557985eb7793-compact .c19a557985eb7793-headerText .c19a557985eb7793-username {
+  text-overflow: clip !important;
+}

@@ -28,6 +28,7 @@
         xfce.thunar
         vlc
         obsidian
+        yt-dlp
 
         lsd
         bat
@@ -44,6 +45,27 @@
         python3
         go
         gcc
+        zulu24
+        openjfx
+        maven
+
+        clang-tools
+        black
+        pyright
+        checkstyle
+        google-java-format
+        eslint_d
+        prettierd
+        luau-lsp
+        lua-language-server
+        stylua
+        texlab
+        typescript-language-server
+        vale
+        zls
+        csslint
+        gopls
+        jdt-language-server
 
         grim
         slurp
