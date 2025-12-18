@@ -49,7 +49,7 @@ in
         config = rec {
             modifier = "Mod4";
             terminal = "kitty";
-            menu = "wofi --show drun";
+            menu = "rofi -show drun";
 
             startup = [
                 { command = "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP"; }
@@ -112,6 +112,8 @@ in
                 "${mod}+period" = "exec grim -g \"$(slurp -b 00000000 -p)\" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy";
 
                 "${mod}+e" = "exec swaylock -i /home/met/.config/sway/wp --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5 --indicator-thickness 6 --text-color FFFFFF";
+        
+                "${mod}+q" = "rofi -show blezz -modi blezz.so -auto-select -matching normal";
 
                 "XF86AudioMute" = "exec pactl set-sink-mute \\@DEFAULT_SINK@ toggle";
                 "XF86AudioLowerVolume" = "exec pactl set-sink-volume \\@DEFAULT_SINK@ -5%";

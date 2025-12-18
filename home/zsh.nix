@@ -3,6 +3,7 @@
 {
     home.file.".p10k.zsh".source = ../dotfiles/p10k/.p10k.zsh;
     xdg.configFile."fastfetch/config.jsonc".source = ../dotfiles/fastfetch/config.jsonc;
+    home.file.".profile".source = ../dotfiles/flatpak/.profile;
 
     programs.fastfetch = {
         enable = true;

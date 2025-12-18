@@ -8,6 +8,7 @@
         wofi
         brightnessctl
         waybar
+        rofi
 
         xdg-desktop-portal
         xdg-desktop-portal-gtk
@@ -21,7 +22,6 @@
         librewolf
         kdePackages.okular
         beeper
-        mullvad-vpn
         ungoogled-chromium
         rofi-blezz
         libreoffice
