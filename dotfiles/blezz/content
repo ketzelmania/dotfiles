@@ -1,0 +1,23 @@
+Main:
+dir(r,Run)
+dir(s,System)
+dir(l,Layout)
+
+Run:
+act(c,Calculator,= --)
+dir(b,Bluetooth)
+
+Bluetooth:
+act(e,Enable Bluetooth,bluetoothctl power on)
+act(c,Connect to Buds,bluetoothctl connect 54:10:4F:FB:D8:AB)
+act(d,Disconnect from Buds,bluetoothctl disconnect 54:10:4F:FB:D8:AB)
+
+System:
+act(x,Sleep,systemctl suspend)
+act(r,Reboot,reboot)
+act(s,Shutdown,poweroff)
+
+Layout:
+act(t,Two monitor,/home/met/Layouts/219_layout.sh)
+act(o,One monitor,/home/met/Layouts/one_layout.sh)
+act(n,Nitrogen restore,nitrogen --restore)

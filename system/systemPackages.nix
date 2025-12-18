@@ -6,5 +6,8 @@
         wget
         dbus
         pulseaudio
+        flatpak
     ];
+
+    services.flatpak.enable = true;
 }

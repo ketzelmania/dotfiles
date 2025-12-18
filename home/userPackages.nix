@@ -5,10 +5,12 @@
         swayfx
         swaylock-effects
         greetd
-        wofi
         brightnessctl
         waybar
+
         rofi
+        rofi-blezz
+        emojipick
 
         xdg-desktop-portal
         xdg-desktop-portal-gtk
@@ -83,6 +85,7 @@
         zsh-syntax-highlighting
 
         flatpak
-        nodejs
+
+        pinta
     ];
 }

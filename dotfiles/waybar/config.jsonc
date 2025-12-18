@@ -3,12 +3,12 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    //"spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["idle_inhibitor", "temperature", "cpu", "memory","network", "pulseaudio", "backlight", "battery", "battery#bat2", "tray", "clock"],
+    "modules-right": ["network", "pulseaudio", "backlight", "battery", "battery#bat2", "tray", "clock"],
     //"modules-right": ["pulseaudio", "backlight", "battery", "battery#bat2", "tray", "clock"],
     // Modules configuration
     // "sway/workspaces": {
@@ -93,7 +93,7 @@
         "spacing": 10
     },
     "clock": {
-        "timezone": "America/New_York",
+        "timezone": "America/Chicago",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "interval": 1,
         //"format-alt": "{:%Y-%m-%d}"
@@ -150,8 +150,8 @@
         "scroll-step": 5, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": " {format_sourc}",
+        "format-bluetooth-muted": " {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": " ",
         "format-icons": {

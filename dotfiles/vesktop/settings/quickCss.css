@@ -61,6 +61,12 @@ div[class*="shakeReaction"] {
   animation: none !important;
 }
 
+/* Disable custom name fonts */
+span[class*="username"] {
+  font-family: "Fira Sans" !important;
+  letter-spacing: 0em !important;
+}
+
 /* Make compact++ clip instead of ellipsis */
 .c19a557985eb7793-compact
   .c19a557985eb7793-headerText

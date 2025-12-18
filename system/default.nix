@@ -15,6 +15,7 @@
         ./fonts.nix
 
         ./tailscale.nix
+        ./steam.nix
 
         ./systemPackages.nix
     ];

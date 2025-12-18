@@ -11,7 +11,7 @@ in
     home.file.".config/sway/wp".source = ../dotfiles/wallpaper/wp11541583-call-of-cthulhu-wallpapers.jpg;
     home.file.".config/sway/wl-color-picker.sh".source = ../dotfiles/scripts/wl-color-picker.sh;
     xdg.configFile."waybar/config.jsonc".source = ../dotfiles/waybar/config.jsonc;
-    xdg.configFile."waybar/style.css".source = ../dotfiles/waybar/style.css;
+    xdg.configFile."waybar/style.css".source = ../dotfiles/waybar/style2.css;
 
     services.swaync = {
         enable = true;
@@ -32,6 +32,7 @@ in
             for_window [title="imv"] floating enable
 
             gaps inner 20
+            gaps top 0
 
             default_border none
 
@@ -106,14 +107,16 @@ in
                 "${mod}+Shift+asterisk" = "move container to workspace number 10";
 
                 "Shift+f4" = "exec grim -g \"$(slurp -d)\" - | wl-copy";
-                "${mod}+z" = "exec wofi -modi window -show window";
+                "${mod}+z" = "exec rofi -modi window -show window";
 
                 "${mod}+Shift+n" = "exec swaync-client -t -sw";
                 "${mod}+period" = "exec grim -g \"$(slurp -b 00000000 -p)\" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy";
 
                 "${mod}+e" = "exec swaylock -i /home/met/.config/sway/wp --clock --indicator --effect-blur 7x5 --effect-vignette 0.5:0.5 --indicator-thickness 6 --text-color FFFFFF";
         
-                "${mod}+q" = "rofi -show blezz -modi blezz.so -auto-select -matching normal";
+                "${mod}+q" = "exec rofi -modi blezz:~/.config/nix/dotfiles/blezz/blezz.so -show blezz -auto-select -matching normal -blezz-config \"~/.config/nix/dotfiles/blezz/content\" -blezz-directory Main";
+
+                "${mod}+Shift+c" = "exec grim -g \"$(slurp -b 00000000 -p)\" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | tr -d \"\\n\" | wl-copy";
 
                 "XF86AudioMute" = "exec pactl set-sink-mute \\@DEFAULT_SINK@ toggle";
                 "XF86AudioLowerVolume" = "exec pactl set-sink-volume \\@DEFAULT_SINK@ -5%";
