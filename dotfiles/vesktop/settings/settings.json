@@ -2,7 +2,9 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
-    "themeLinks": [],
+    "themeLinks": [
+        "https://grzesiek11.stary.pc.pl/files/builds/compactpp/latest/compactpp-default.theme.css"
+    ],
     "eagerPatches": false,
     "enabledThemes": [
         "compact++.css",
