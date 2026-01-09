@@ -11,7 +11,7 @@
         ./neovim.nix
         ./git.nix
         ./gh.nix
-        ./kitty.nix
+        ./kitty-amber.nix
         ./zsh.nix
         ./tmux.nix
         ./vesktop.nix

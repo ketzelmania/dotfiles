@@ -98,7 +98,7 @@
         "interval": 1,
         //"format-alt": "{:%Y-%m-%d}"
         //"format": "{:L%Y-%m-%d<small>[%a]</small> <tt><small>%p</small></tt>%I:%M}"
-        "format": "󰥔 {:%b %d, %Y, %H:%M:%S}"
+        "format": "󰥔 {:%m-%d-%y %H:%M:%S}"
     },
     "cpu": {
         "format": " {usage}%",

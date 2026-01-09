@@ -87,5 +87,6 @@
         flatpak
 
         pinta
+        qbittorrent
     ];
 }
