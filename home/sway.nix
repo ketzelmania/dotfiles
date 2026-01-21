@@ -75,6 +75,10 @@ in
                     xkb_layout = "us_qwerty-prog";
                     xkb_options = "ctrl:nocaps";
                 };
+
+                "type:touch" = {
+                    events = "disabled";
+                };
             };
 
             output = {

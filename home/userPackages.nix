@@ -88,5 +88,7 @@
 
         pinta
         qbittorrent
+        mariadb
+        wireshark
     ];
 }
